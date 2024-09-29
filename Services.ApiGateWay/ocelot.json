@@ -1,0 +1,34 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/contact/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 10601
+        }
+      ],
+      "UpstreamPathTemplate": "/c/{id}",
+      "UpstreamHttpMethod": [ "Get", "Delete", "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/contact",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 10601
+        }
+      ],
+      "UpstreamPathTemplate": "/c",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+  ]
+}
+
+//https://localhost:7100/c/100
+//GET
+//https://localhost:7100/c
+
+//GET 

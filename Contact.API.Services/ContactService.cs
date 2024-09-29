@@ -14,19 +14,19 @@ namespace Contact.API.Services
         {
             new ContactModel
             {
-                Id=new Random().Next(1,100000),
+                Id=1,
                 Firstname="Aysel",
                 Lastname="Eliyeva"
             },
             new ContactModel
             {
-                Id=new Random().Next(1,100000),
+                Id=2,
                 Firstname="Tural",
                 Lastname="Memmedov"
             },
             new ContactModel
             {
-                Id=new Random().Next(1,100000),
+                Id=3,
                 Firstname="Ali",
                 Lastname="Hemzeyev"
             }

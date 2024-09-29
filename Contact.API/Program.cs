@@ -13,6 +13,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IContactService, ContactService>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
+builder.WebHost.UseUrls("https://*:10601");
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

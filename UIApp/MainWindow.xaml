@@ -6,7 +6,22 @@
         xmlns:local="clr-namespace:UIApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <StackPanel>
+            <DataGrid SelectedItem="{Binding Contact,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                      ItemsSource="{Binding AllContacts}"
+                      ></DataGrid>
+            <Button Name="GetAll" Click="GetAll_Click">Get All Contacts</Button>
+            <Button Name="Delete" Click="Delete_Click">Delete Contact</Button>
+        </StackPanel>
+        <StackPanel Width="400">
+            <TextBlock Text="Firstname"></TextBlock>
+            <TextBox Name="firstnameTxtbox" Text="{Binding Contact.Firstname,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBlock Text="Lastname"></TextBlock>
+            <TextBox Name="lastnameTxtbox" Text="{Binding Contact.Lastname,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <Button x:Name="addContact" Click="addContact_Click">Add New Contact</Button>
+            <Button x:Name="updateContact" Click="updateContact_Click">Update Contact</Button>
+            
+        </StackPanel>
+    </StackPanel>
 </Window>
